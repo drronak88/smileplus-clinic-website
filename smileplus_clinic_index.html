@@ -1,0 +1,244 @@
+<!--
+SmilePlus Dental Clinic - Single-file website (index.html)
+Generated for Dr. Ronak Dewani
+
+What this file contains:
+- Complete responsive HTML + CSS + small JS (single-file) ready for GitHub Pages
+- Logo: place your logo file at `assets/logo.png` (or keep original filename and update <img> src)
+- Gallery: placeholder images in `assets/` (replace with your photos)
+
+How to publish on GitHub Pages (quick):
+1. Create a new public repo on GitHub (e.g. `smileplus-clinic`).
+2. Upload `index.html` and create a folder `assets/` and upload your logo as `logo.png` and any gallery images.
+3. Go to Settings -> Pages -> Source -> choose `main` branch and `/ (root)` -> Save.
+4. Visit https://YOUR_GITHUB_USERNAME.github.io/REPO_NAME after a few minutes.
+
+-->
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>SmilePlus Dental Clinic and Implant Center</title>
+  <meta name="description" content="SmilePlus Dental Clinic and Implant Center - Dr. Ronak Dewani. RCT, Implants, Cleaning, Smile Design, Extractions, Wisdom Tooth Surgery, Dentures.">
+  <link rel="icon" href="data:;base64,iVBORw0KGgo=">
+  <style>
+    /* --- Simple beige-gold theme --- */
+    :root{
+      --bg:#fbf7f3; /* very light beige */
+      --card:#fff;
+      --gold:#b07a36; /* warm gold/brown */
+      --muted:#7b6b5e;
+      --accent:#e9dccf;
+      --radius:14px;
+      --maxw:1100px;
+      font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      background:linear-gradient(180deg,var(--bg),#fff);
+      color:var(--muted);
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.5;
+    }
+    .container{max-width:var(--maxw);margin:0 auto;padding:24px}
+
+    /* Header */
+    header{display:flex;align-items:center;justify-content:space-between;padding:18px 0}
+    .brand{display:flex;align-items:center;gap:14px}
+    .brand img{height:68px;width:auto;border-radius:10px}
+    .brand h1{margin:0;font-size:20px;color:var(--gold);letter-spacing:0.2px}
+    .brand p{margin:0;font-size:13px;color:var(--muted)}
+
+    nav{display:flex;gap:12px;align-items:center}
+    nav a{color:var(--muted);text-decoration:none;padding:8px 12px;border-radius:10px;font-weight:600}
+    nav a.cta{background:var(--gold);color:white}
+
+    /* Hero */
+    .hero{display:grid;grid-template-columns:1fr 380px;gap:28px;align-items:center;padding:28px 0}
+    .hero-left{background:linear-gradient(180deg,rgba(255,255,255,0.6),rgba(255,255,255,0.9));padding:30px;border-radius:var(--radius);box-shadow:0 6px 18px rgba(11,9,8,0.06)}
+    .hero h2{color:#4b3b32;margin:0 0 10px;font-size:28px}
+    .tag{color:var(--muted);margin-bottom:18px}
+    .hero p{margin:0 0 18px}
+    .buttons{display:flex;gap:12px}
+    .btn{display:inline-block;padding:12px 16px;border-radius:10px;text-decoration:none;font-weight:700}
+    .btn.primary{background:var(--gold);color:white}
+    .btn.secondary{border:1px solid var(--gold);color:var(--gold);background:transparent}
+
+    /* Card sections */
+    .card{background:var(--card);padding:18px;border-radius:12px;margin-bottom:16px}
+
+    /* Treatments grid */
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
+    .treatment{padding:14px;border-radius:12px;border:1px dashed rgba(176,122,54,0.12);background:linear-gradient(180deg,#fff, #fbf7f3)}
+    .treatment h4{margin:0 0 8px;color:var(--gold)}
+
+    /* Gallery */
+    .gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:10px}
+    .gallery img{width:100%;height:130px;object-fit:cover;border-radius:10px}
+
+    /* Contact */
+    .contact-columns{display:grid;grid-template-columns:1fr 360px;gap:16px}
+    .map iframe{width:100%;height:100%;min-height:260px;border:0;border-radius:10px}
+
+    footer{padding:18px 0;text-align:center;color:var(--muted);font-size:14px}
+
+    /* Responsive */
+    @media (max-width:900px){
+      .hero{grid-template-columns:1fr}
+      .contact-columns{grid-template-columns:1fr}
+      nav{gap:8px}
+      .brand img{height:56px}
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <!-- Replace path with assets/logo.png -->
+        <img src="assets/logo.png" alt="SmilePlus logo" id="logo-img">
+        <div>
+          <h1>SmilePlus Dental Clinic</h1>
+          <p>And Implant Center — Dr. Ronak Dewani, BDS Root canal Specialist, Implantologist</p>
+        </div>
+      </div>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#treatments">Treatments</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact" class="cta">Book Appointment</a>
+      </nav>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-left card">
+        <h2>Advanced Dental Care with a Gentle Touch</h2>
+        <p class="tag">Providing comfortable, modern dentistry — RCT, Implants, Smile Design and more.</p>
+        <p>Welcome to <strong>SmilePlus Dental Clinic and Implant Center</strong>. Our team focuses on high-quality root canal, implant procedures, restorative and cosmetic dentistry tailored to each patient.
+        </p>
+        <div class="buttons" style="margin-top:18px">
+          <a class="btn primary" href="#contact" onclick="scrollToContact(event)">Book Appointment</a>
+          <a class="btn secondary" href="tel:+91972476002">Call / WhatsApp: +91 97247 6002</a>
+        </div>
+      </div>
+
+      <aside class="card" style="height:100%">
+        <h3 style="color:var(--gold);margin-top:0">Contact & Hours</h3>
+        <p style="margin:6px 0"><strong>Address:</strong><br>1st floor Raheman Plaza, Beside Shabina Shopping Center, Bhalej Road, Anand - 388001</p>
+        <p style="margin:6px 0"><strong>Phone / WhatsApp:</strong><br><a href="https://wa.me/91972476002" target="_blank">+91 97247 6002</a></p>
+        <p style="margin:6px 0"><strong>Email:</strong><br><a href="mailto:ddr.ronak@yahoo.com">ddr.ronak@yahoo.com</a></p>
+        <hr style="border:none;border-top:1px dashed rgba(0,0,0,0.06);margin:12px 0">
+        <p style="margin:0;font-size:13px;color:var(--muted)"><strong>Opening Hours</strong><br>Mon - Sat: 10:00 AM – 7:00 PM<br>Sun: Closed / Emergency only</p>
+      </aside>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="card">
+      <h3 style="color:var(--gold);margin-top:0">About Dr. Ronak Dewani</h3>
+      <p><strong>Dr. Ronak Dewani</strong> (BDS) is a Root Canal Specialist and Implantologist dedicated to delivering painless, modern dental care. Our clinic combines up-to-date techniques with compassionate care to ensure the best outcomes for your oral health.</p>
+    </section>
+
+    <!-- TREATMENTS -->
+    <section id="treatments" class="card">
+      <h3 style="color:var(--gold);margin-top:0">Our Treatments</h3>
+      <div class="grid">
+        <div class="treatment"><h4>Root Canal Treatment (RCT)</h4><p>Comfortable, microscope-assisted RCT for predictable results.</p></div>
+        <div class="treatment"><h4>Dental Implants</h4><p>Single and multiple tooth implants with precise planning.</p></div>
+        <div class="treatment"><h4>Cleaning & Scaling</h4><p>Professional hygiene and periodontal maintenance.</p></div>
+        <div class="treatment"><h4>Smile Design</h4><p>Cosmetic options including veneers and whitening.</p></div>
+        <div class="treatment"><h4>Tooth Extraction</h4><p>Simple and surgical extractions with comfortable protocols.</p></div>
+        <div class="treatment"><h4>Wisdom Tooth Surgery</h4><p>Impacted wisdom tooth removal with postoperative care.</p></div>
+        <div class="treatment"><h4>Dentures</h4><p>Partial and complete dentures for functional and aesthetic results.</p></div>
+      </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section id="gallery" class="card">
+      <h3 style="color:var(--gold);margin-top:0">Gallery</h3>
+      <div class="gallery">
+        <!-- Replace these with your real images in assets/ folder -->
+        <img src="assets/photo1.jpg" alt="clinic photo 1">
+        <img src="assets/photo2.jpg" alt="clinic photo 2">
+        <img src="assets/photo3.jpg" alt="clinic photo 3">
+        <img src="assets/photo4.jpg" alt="clinic photo 4">
+      </div>
+      <p style="font-size:13px;color:var(--muted);margin-top:10px">Tip: Replace the placeholder images inside the <code>assets/</code> folder with real photos of your clinic and procedures.</p>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="card">
+      <h3 style="color:var(--gold);margin-top:0">Contact & Appointment</h3>
+      <div class="contact-columns">
+        <div>
+          <p>Prefer WhatsApp? Click below to message us directly.</p>
+          <p style="margin-top:8px">
+            <a class="btn primary" href="https://wa.me/91972476002" target="_blank">Message on WhatsApp</a>
+            <a class="btn secondary" href="mailto:ddr.ronak@yahoo.com">Email: ddr.ronak@yahoo.com</a>
+          </p>
+
+          <hr style="margin:14px 0;border:none;border-top:1px dashed rgba(0,0,0,0.06)">
+
+          <h4 style="margin:8px 0 6px">Quick Appointment Form</h4>
+          <!-- Simple JS form that creates a prefilled WhatsApp message or opens email -->
+          <form id="appt-form" onsubmit="makeAppointment(event)">
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">
+              <input required placeholder="Full name" id="name" style="padding:10px;border-radius:8px;border:1px solid #e6dfd6">
+              <input required placeholder="Phone" id="phone" style="padding:10px;border-radius:8px;border:1px solid #e6dfd6">
+            </div>
+            <input placeholder="Preferred date / time" id="datetime" style="padding:10px;border-radius:8px;border:1px solid #e6dfd6;margin-top:8px;width:100%">
+            <textarea id="notes" placeholder="Brief message / concern" style="padding:10px;border-radius:8px;border:1px solid #e6dfd6;margin-top:8px;width:100%"></textarea>
+            <div style="margin-top:8px">
+              <button class="btn primary" type="submit">Send via WhatsApp</button>
+              <button class="btn secondary" type="button" onclick="sendEmail()">Send via Email</button>
+            </div>
+          </form>
+        </div>
+
+        <aside class="map">
+          <!-- Google Maps embed using the clinic address. If Google blocks embedding in your region, replace with a static map image or link. -->
+          <iframe src="https://maps.google.com/maps?q=1st%20floor%20Raheman%20Plaza%20Beside%20Shabina%20Shopping%20Center%20Bhalej%20Road%20Anand%20Gujarat%20388001&output=embed" loading="lazy"></iframe>
+        </aside>
+      </div>
+    </section>
+
+    <footer>
+      <div>© <strong>SmilePlus Dental Clinic and Implant Center</strong> — 1st floor Raheman Plaza, Anand • Phone/WhatsApp: +91 97247 6002</div>
+    </footer>
+  </div>
+
+  <script>
+    function scrollToContact(e){ e && e.preventDefault(); document.querySelector('#contact').scrollIntoView({behavior:'smooth'}); }
+
+    function makeAppointment(e){
+      e.preventDefault();
+      const name = document.getElementById('name').value.trim();
+      const phone = document.getElementById('phone').value.trim();
+      const datetime = document.getElementById('datetime').value.trim();
+      const notes = document.getElementById('notes').value.trim();
+      const clinicNumber = '91972476002';
+      let msg = `Hello Dr. Ronak, I am ${name} (${phone}). I would like an appointment`;
+      if(datetime) msg += ` on ${datetime}`;
+      if(notes) msg += `. Notes: ${notes}`;
+      msg += '.';
+      const wsUrl = `https://wa.me/${clinicNumber}?text=` + encodeURIComponent(msg);
+      window.open(wsUrl, '_blank');
+    }
+
+    function sendEmail(){
+      const name = document.getElementById('name').value.trim();
+      const phone = document.getElementById('phone').value.trim();
+      const datetime = document.getElementById('datetime').value.trim();
+      const notes = document.getElementById('notes').value.trim();
+      const subject = `Appointment request from ${name || 'website visitor'}`;
+      let body = `Name: ${name}%0D%0APhone: ${phone}%0D%0APreferred: ${datetime}%0D%0A%0D%0A${notes}`;
+      window.location.href = `mailto:ddr.ronak@yahoo.com?subject=${encodeURIComponent(subject)}&body=${body}`;
+    }
+  </script>
+</body>
+</html>
